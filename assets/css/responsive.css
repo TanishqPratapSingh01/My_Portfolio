@@ -1,0 +1,94 @@
+/* TABLET */
+@media screen and (max-width: 950px) {
+    .navbar {
+        padding: 12px 25px;
+    }
+
+    .hero {
+        padding: 0 25px;
+    }
+
+    .hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .section {
+        padding: 80px 25px;
+    }
+
+    .about-layout {
+        flex-direction: column;
+    }
+
+    .about-photo-card {
+        align-self: center;
+        max-width: 280px;
+        width: 100%;
+    }
+}
+
+/* MOBILE NAV & LAYOUT */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        flex-direction: column;
+        background: #0f0f10;
+        padding: 18px;
+        border-radius: 14px;
+        display: none;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    body.light .nav-links {
+        background: #ffffff;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero-content {
+        margin-top: 90px;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .skills-container {
+        gap: 10px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .modal-content {
+        max-width: 95%;
+    }
+}
+
+/* SMALL MOBILE */
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .navbar {
+        padding: 10px 16px;
+    }
+
+    .section {
+        padding: 70px 16px;
+    }
+}

@@ -1,0 +1,662 @@
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #4df3ff;
+    --secondary: #5468ff;
+    --text-light: #ffffff;
+    --text-dark: #0f0f10;
+    --bg-dark: #0f0f10;
+    --bg-card: #131318;
+    --glow: 0 0 20px rgba(77, 243, 255, 0.7),
+            0 0 40px rgba(84, 104, 255, 0.4);
+}
+
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-dark);
+    color: #e7e7e7;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 15, 16, 0.7);
+    backdrop-filter: blur(12px);
+    z-index: 999;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-shadow: var(--glow);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+    text-shadow: var(--glow);
+}
+
+/* THEME TOGGLE BUTTON */
+.theme-toggle-btn {
+    margin-left: 20px;
+    padding: 8px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(77, 243, 255, 0.5);
+    background: transparent;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--text-dark);
+    box-shadow: var(--glow);
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.hamburger span {
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at top left, #1a1a22, #08080a);
+    overflow: hidden;
+}
+
+#three-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 650px;
+    margin-top: 70px; /* offset for fixed navbar */
+}
+
+.hero-tagline {
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #9ea0ff;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 3.4rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+    text-shadow: var(--glow);
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    color: #b4b4b4;
+    margin-bottom: 25px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+}
+
+/* BUTTONS */
+.btn,
+.btn-outline {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--text-dark);
+    box-shadow: 0 0 12px rgba(77, 243, 255, 0.5);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px rgba(77, 243, 255, 0.9);
+}
+
+.btn-outline {
+    border: 1px solid rgba(77, 243, 255, 0.5);
+    color: var(--text-light);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: rgba(77, 243, 255, 0.1);
+    box-shadow: var(--glow);
+}
+
+/* GENERIC SECTIONS */
+.section {
+    padding: 100px 50px;
+    position: relative;
+}
+
+.section-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 999px;
+}
+
+.section-description {
+    color: #b5b5b5;
+    max-width: 700px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+/* ABOUT LAYOUT */
+.about-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-photo-card {
+    flex: 1;
+    text-align: center;
+}
+
+.about-photo-wrapper {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    box-shadow: var(--glow);
+}
+
+.about-photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-photo-info .about-name {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.about-photo-info .about-role {
+    font-size: 0.85rem;
+    color: #9ea0ff;
+    margin-bottom: 4px;
+}
+
+.about-photo-info .about-college {
+    font-size: 0.85rem;
+    color: #bfbfbf;
+}
+
+/* NEO-UI BASE CARD */
+.neo-card {
+    background: var(--bg-card);
+    box-shadow:
+        10px 10px 20px #0a0a0b,
+        -10px -10px 20px #18181f;
+    border-radius: 20px;
+    padding: 25px;
+    transition: 0.3s ease;
+}
+
+.neo-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 0 20px rgba(77, 243, 255, 0.3),
+        0 0 40px rgba(77, 243, 255, 0.2);
+}
+
+/* SKILLS */
+.skills-container {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.skill-card {
+    padding: 10px 16px;
+    border-radius: 16px;
+    background: #131318;
+    color: var(--primary);
+    box-shadow:
+        inset 4px 4px 12px #09090b,
+        inset -4px -4px 12px #1b1b1f;
+    font-size: 0.88rem;
+}
+
+/* PROJECTS */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card {
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background: #131318;
+    box-shadow:
+        8px 8px 25px #0a0a0c,
+        -8px -8px 25px #18181d;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 15px 20px 5px;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.project-card p {
+    padding: 0 20px 18px;
+    color: #c9c9c9;
+    font-size: 0.9rem;
+}
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    margin-top: 25px;
+    padding-left: 25px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    opacity: 0.7;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--primary);
+    box-shadow: var(--glow);
+    position: absolute;
+    left: 3px;
+    top: 18px;
+}
+
+.timeline-content {
+    margin-left: 35px;
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    color: #9ea0ff;
+    text-transform: uppercase;
+}
+
+/* CONTACT FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    max-width: 100%;
+    margin-top: 20px;
+    gap: 12px;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    border-radius: 12px;
+    background: #131318;
+    color: #fff;
+    border: none;
+    outline: none;
+    box-shadow:
+        inset 5px 5px 10px #0a0a0b,
+        inset -5px -5px 10px #1b1b1f;
+    font-size: 0.9rem;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px 10px 40px;
+    color: #828282;
+    font-size: 0.85rem;
+}
+
+/* PAGE LOADER */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #0f0f10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.loader-circle {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #222;
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* CUSTOM CURSOR */
+.cursor {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    background: var(--primary);
+    box-shadow: var(--glow);
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    transition: 0.08s ease-out;
+    z-index: 999999;
+}
+
+/* MODALS (Project & Resume) */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 12000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: #ccc;
+    cursor: pointer;
+}
+
+/* Project Modal */
+.modal-description {
+    margin: 10px 0 16px;
+    color: #d2d2d2;
+    font-size: 0.95rem;
+}
+
+.modal-techstack h4 {
+    margin-bottom: 8px;
+}
+
+.modal-techstack ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.modal-techstack li {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+/* Resume Modal */
+.resume-modal h3 {
+    margin-bottom: 4px;
+}
+
+.modal-note {
+    font-size: 0.85rem;
+    color: #b5b5b5;
+    margin-bottom: 10px;
+}
+
+.resume-frame-wrapper {
+    margin-top: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow:
+        inset 5px 5px 10px #0a0a0b,
+        inset -5px -5px 10px #1b1b1f;
+}
+
+.resume-frame-wrapper iframe {
+    width: 100%;
+    height: 60vh;
+    border: none;
+}
+
+/* LIGHT THEME */
+body.light {
+    background: #f5f5f5;
+    color: #111;
+}
+
+body.light .navbar {
+    background: rgba(250, 250, 250, 0.9);
+}
+
+body.light .logo {
+    text-shadow: none;
+}
+
+body.light .nav-links a {
+    color: #222;
+}
+
+body.light .nav-links a:hover {
+    color: var(--secondary);
+}
+
+body.light .hero {
+    background: radial-gradient(circle at top left, #ffffff, #e0e2ff);
+}
+
+body.light .neo-card,
+body.light .project-card,
+body.light form input,
+body.light form textarea {
+    background: #ffffff;
+    box-shadow:
+        6px 6px 15px #d1d1d1,
+        -6px -6px 15px #ffffff;
+    color: #111;
+}
+
+body.light .skill-card {
+    background: #f3f3f8;
+    box-shadow:
+        inset 3px 3px 8px #d1d1d1,
+        inset -3px -3px 8px #ffffff;
+}
+
+body.light footer {
+    color: #666;
+}
+/* HOLOGRAM TEXT */
+.hologram-text {
+    font-size: 1.2rem;
+    color: var(--primary);
+    opacity: 0.9;
+    text-shadow: 0 0 12px rgba(77, 243, 255, 0.7),
+                 0 0 22px rgba(77, 243, 255, 0.5);
+    animation: holoFloat 3s infinite alternate ease-in-out;
+}
+
+@keyframes holoFloat {
+    from { transform: translateY(0px); opacity: 0.8; }
+    to   { transform: translateY(-10px); opacity: 1; }
+}
+
+/* MODAL BADGE TECH STACK */
+.modal-techstack {
+    margin: 15px 0;
+}
+
+.modal-techstack span {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #131318;
+    color: var(--primary);
+    margin: 4px;
+    border-radius: 10px;
+    box-shadow: inset 3px 3px 6px #0a0a0b,
+                inset -3px -3px 6px #1a1a1f;
+}
+/* Resume Modal Full View */
+.resume-modal {
+    width: 95%;
+    max-width: 900px;
+    height: 90vh;  /* very tall */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.resume-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.resume-frame-wrapper {
+    flex: 1; /* take remaining full height */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow:
+        inset 5px 5px 10px #0a0a0b,
+        inset -5px -5px 10px #1b1b1f;
+}
+
+.resume-frame {
+    width: 100%;
+    height: 100%; /* fill entire modal */
+    border: none;
+}

@@ -1,0 +1,45 @@
+[
+    {
+        "title": "Waste Management System",
+        "shortDescription": "A structured waste tracking and categorization platform.",
+        "fullDescription": "A full-stack waste management platform built to categorize waste, store records, and streamline the process of responsible disposal. Uses React for UI and Node.js + Express for backend logic.",
+        "image": "assets/images/waste-management.jpg",
+        "techStack": [
+            "React",
+            "Node.js",
+            "Express.js",
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "liveUrl": "https://your-waste-management-link.com"
+    },
+
+    {
+        "title": "Weather Application",
+        "shortDescription": "Real-time weather forecasting using APIs.",
+        "fullDescription": "A responsive web app that fetches real-time weather data using public APIs. Displays temperature, humidity, wind speed, and visual weather icons with a clean UI.",
+        "image": "assets/images/weather-app.jpg",
+        "techStack": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "API"
+        ],
+        "liveUrl": "https://your-weather-app-link.com"
+    },
+
+    {
+        "title": "Portfolio Website",
+        "shortDescription": "A futuristic personal portfolio site.",
+        "fullDescription": "A complete animated portfolio with 3D background, modal system, resume viewer, typewriter effect, and responsive design. Built to showcase skills, projects, and interactive UI elements.",
+        "image": "assets/images/portfolio-preview.jpg",
+        "techStack": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Three.js"
+        ],
+        "liveUrl": "https://your-portfolio-link.com"
+    }
+]
