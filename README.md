@@ -40,6 +40,3 @@ https://portfolio-rose-theta-46.vercel.app
 - Git & GitHub  
 
 ---
-
-## 📂 Folder Structure
-
