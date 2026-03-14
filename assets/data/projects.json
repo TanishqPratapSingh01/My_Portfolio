@@ -1,38 +1,39 @@
 [
     {
-        "title": "Waste Management System",
-        "shortDescription": "A structured waste tracking and categorization platform.",
-        "fullDescription": "A full-stack waste management platform built to categorize waste, store records, and streamline the process of responsible disposal. Uses React for UI and Node.js + Express for backend logic.",
-        "image": "assets/images/waste-management.jpg",
+        "title": "AI Interview Agent",
+        "shortDescription": "AI mock interview platform with authentication and payment.",
+        "fullDescription": "Full stack AI interview system built using MERN stack with secure login, REST APIs, payment integration and deployment.",
+        "image": "assets/images/project1.jpg",
         "techStack": [
+            "MongoDB",
+            "Express",
             "React",
             "Node.js",
-            "Express.js",
-            "HTML",
-            "CSS",
-            "JavaScript"
+            "REST API",
+            "Payment"
         ],
-        "liveUrl": "https://your-waste-management-link.com"
+        "liveUrl": "https://github.com/TanishqPratapSingh01/TalentForge"
     },
 
     {
-        "title": "Weather Application",
-        "shortDescription": "Real-time weather forecasting using APIs.",
-        "fullDescription": "A responsive web app that fetches real-time weather data using public APIs. Displays temperature, humidity, wind speed, and visual weather icons with a clean UI.",
-        "image": "assets/images/weather-app.jpg",
+        "title": "Smart Research Assistant",
+        "shortDescription": "Spring Boot backend with AI API integration.",
+        "fullDescription": "Backend built using Spring Boot with AI API integration and browser extension communicating using REST APIs.",
+        "image": "assets/images/project2.jpg",
         "techStack": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "API"
+            "Java",
+            "Spring Boot",
+            "REST API",
+            "Gemini API",
+            "Extension"
         ],
-        "liveUrl": "https://your-weather-app-link.com"
+        "liveUrl": "https://github.com/TanishqPratapSingh01/Research_Assistant"
     },
 
     {
         "title": "Portfolio Website",
-        "shortDescription": "A futuristic personal portfolio site.",
-        "fullDescription": "A complete animated portfolio with 3D background, modal system, resume viewer, typewriter effect, and responsive design. Built to showcase skills, projects, and interactive UI elements.",
+        "shortDescription": "Interactive developer portfolio with animations.",
+        "fullDescription": "Responsive portfolio built using HTML CSS JS with Three.js background, modal UI and theme toggle.",
         "image": "assets/images/portfolio-preview.jpg",
         "techStack": [
             "HTML",
@@ -40,6 +41,6 @@
             "JavaScript",
             "Three.js"
         ],
-        "liveUrl": "https://your-portfolio-link.com"
+        "liveUrl": "https://portfolio-rose-theta-46.vercel.app/"
     }
 ]

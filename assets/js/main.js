@@ -87,11 +87,12 @@ const typewriterElement = document.getElementById("typewriterText");
 
 if (typewriterElement) {
     const typewriterTexts = [
-        "Frontend Developer",
-        "Java DSA Enthusiast",
-        "3rd Year BTech IT Student",
-        "Creator of Futuristic UI Experiences"
-    ];
+    "Java Backend Developer",
+    "MERN Stack Developer",
+    "Spring Boot Developer",
+    "Competitive Programmer",
+    "DSA Enthusiast"
+];
 
     let textIndex = 0;
     let charIndex = 0;
@@ -147,7 +148,9 @@ fetch("assets/data/projects.json")
                 <p>${project.shortDescription}</p>
             `;
 
-            card.addEventListener("click", () => openProjectModal(index));
+            card.addEventListener("click", () => {
+    window.open(project.liveUrl, "_blank");
+});
             container.appendChild(card);
         });
     })
